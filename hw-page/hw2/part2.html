@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2 - Part 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+        function process() {
+            const nums = []
+            nums.push(parseInt(document.getElementById('number1').value));
+            nums.push(parseInt(document.getElementById('number2').value));
+            nums.push(parseInt(document.getElementById('number3').value));
+
+            for (const num of nums) {
+                if (isNaN(num)) {
+                    $('#number1').val('');
+                    $('#number2').val('');
+                    $('#number3').val('');
+                    $('#result').fadeTo("fast", 1).val('Please only enter numbers');
+                    
+                    return;
+                }
+            }
+
+            const sum = nums[0] + nums[1] + nums[2];
+            const average = sum / 3;
+            const product = nums[0] * nums[1] * nums[2];
+
+            $('#result').fadeTo("fast", 1).val(`Sum: ${sum}\n` 
+                + `Average: ${average.toFixed(2)}\n` 
+                + `Product: ${product}\n`
+                + `Min: ${Math.min(...nums)}\n`
+                + `Max: ${Math.max(...nums)}`);
+        }
+
+        $(document).ready(function() {
+            $('#fadeResultButton').click(function() {
+                $('#result').fadeTo("slow", 0.4);
+            });
+
+            $('#myform').on('reset', function() {
+                $('#result').fadeTo('fast', 1);
+            })
+        });
+
+
+    </script>
+
+    <form name="myform" id="myform">
+        <table>
+            <tr>
+                <td>Interger 1</td>
+                <td><input type="number" id="number1"></td>
+            </tr>
+            <tr>
+                <td>Integer 2</td>
+                <td><input type="number" id="number2"></td>
+            </tr>
+            <tr>
+                <td>Integer 3</td>
+                <td><input type="number" id="number3"></td>
+            </tr>
+        </table>
+        <textarea name="result" id="result" readonly rows="5"></textarea>
+        <div>
+            <input type="button" onclick="process()" value="Submit" class="styled-button">
+            <input type="reset" value="Reset" class="styled-button">
+            <input type="button" id="fadeResultButton" value="Fade Results" class="styled-button">
+        </div>
+    </form>
+
+    <br>
+    <br>
+
+    <div>
+        <ul>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/hw2/hw2.html">Homework 2</a>
+            </li>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/index.html">Go Home</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

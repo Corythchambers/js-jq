@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Exercise 2a</title>
+</head>
+<body>
+    <script>
+        let userInputs = []
+        userInputs.push(prompt("Enter first integer"));
+        userInputs.push(prompt("Enter second integer"));
+        userInputs.push(prompt("Enter third integer"));
+        userInputs.push(prompt("Enter fourth integer"));
+
+        let underSix = 0
+        let greaterOrEqualSix = 0;
+        for (let userInput of userInputs) {
+            if (userInput < 6) {
+                underSix++;
+            } else {
+                greaterOrEqualSix++;
+            }
+        }
+
+        alert(`${userInputs[0]}, ${userInputs[1]}, ${userInputs[2]}, ${userInputs[3]}\n ${underSix} under six and ${greaterOrEqualSix} greater or equal to six`)
+        
+    </script>
+</body>
+</html>

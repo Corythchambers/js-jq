@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<body>
+    <script>
+        function process() {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            let greater = 0;
+            if (num1 > num2) {
+                greater = num1
+            } else {
+                greater = num2
+            }
+
+
+            document.getElementById('result').value = `${num1} ${num2}\n Added: ${num1 + num2}\n Greater: ${greater}`
+        }
+        
+    </script>
+
+    <section class="main">
+        <br>
+        <form id="myform" name="myform">
+            <table>
+                <tr>
+                    <td>First Number</td>
+                    <td><input type="number" id="num1" autofocus></td>
+                    <td>Second Number</td>
+                    <td><input type="number" id="num2"></td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        Result: <textarea rows="6" cols="40" id="result" readonly></textarea>
+
+        <br>
+        <br>
+
+        <input type="button" onclick="process()" value="SUBMIT">
+        <input type="reset" value="RESET">
+
+        <br><br>
+
+    </section>
+</body>
+</html>

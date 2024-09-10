@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2 - Extra Credit</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        function process() {
+            const currencies = {
+                "euro": 0.84,
+                "ca-dollar": 1.23,
+                "hk-dollar": 7.76,
+                "jp-yen": 110.80,
+                "mx-peso": 19.82
+            }
+
+            const dollars = parseInt(document.getElementById('dollars').value);
+
+            for (const currency in currencies) {
+                document.getElementById(currency).innerHTML = (currencies[currency] * dollars).toFixed(2);
+            }
+        }
+
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+
+            $('#dollars').focus(function() {
+                $(this).css('background-color','#fbffca');
+            });  
+
+            $('#dollars').blur(function() {
+                $(this).css('background-color','');
+            });
+        });
+
+
+    </script>
+
+    <div id="flip">Click to Show/Hide Instructions</div>
+    <div id="panel">The foreign exchange rates in June 2021 <br> Enter a dollar amount in the table below to see the corresponding foreign exchange values</div>
+
+    <form name="myform" id="myform">
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th colspan="3">Monetary Exchange Rates</th>
+                </tr>
+                <tr>
+                    <th>Currency</th>
+                    <th>Rate</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Euro</td>
+                    <td>0.84</td>
+                    <td id="euro"></td>
+                </tr>
+                <tr>
+                    <td>Canadian Dollar</td>
+                    <td>1.23</td>
+                    <td id="ca-dollar"></td>
+                </tr>
+                <tr>
+                    <td>Hong Kong Dollar</td>
+                    <td>7.76</td>
+                    <td id="hk-dollar"></td>
+                </tr>
+                <tr>
+                    <td>Japanese Yen</td>
+                    <td>110.80</td>
+                    <td id="jp-yen"></td>
+                </tr>
+                <tr>
+                    <td>Mexican Peso</td>
+                    <td>19.82</td>
+                    <td id="mx-peso"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Enter Amount of U.S. Dollars</td>
+                    <td><input type="number" id="dollars"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <input type="button" onclick="process()" value="Submit" class="styled-button">
+            <input type="reset" value="Reset" class="styled-button">
+        </div>
+    </form>
+
+    <br>
+    <br>
+
+    <div>
+        <ul>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/hw2/hw2.html">Homework 2</a>
+            </li>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/index.html">Go Home</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
