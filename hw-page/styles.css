@@ -96,3 +96,11 @@ table {
     padding: 50px;
     display: none;
 }
+
+form {
+    border: 2px solid darkmagenta; /* Set the border color and width */
+    border-radius: 10px;           /* Optional: rounded corners */
+    padding: 20px;                 /* Optional: space inside the border */
+    background-color: white;       /* Optional: background color for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for depth */
+}
