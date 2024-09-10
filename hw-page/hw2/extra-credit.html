@@ -20,9 +20,15 @@
 
             const dollars = parseInt(document.getElementById('dollars').value);
 
-            for (const currency in currencies) {
-                document.getElementById(currency).innerHTML = (currencies[currency] * dollars).toFixed(2);
-            }
+            if (!isNaN(dollars) || dollars !== 0) {
+                for (const currency in currencies) {
+                    if (!isNaN(dollars) && dollars !== 0) {
+                        document.getElementById(currency).innerHTML = (currencies[currency] * dollars).toFixed(2);
+                    } else {
+                        document.getElementById(currency).innerHTML = '';
+                    }
+                }
+            } 
         }
 
         $(document).ready(function(){
@@ -44,6 +50,8 @@
 
     <div id="flip">Click to Show/Hide Instructions</div>
     <div id="panel">The foreign exchange rates in June 2021 <br> Enter a dollar amount in the table below to see the corresponding foreign exchange values</div>
+
+    <br>
 
     <form name="myform" id="myform">
         <table border="1" cellpadding="10" cellspacing="0">
@@ -89,7 +97,7 @@
                 </tr>
             </tbody>
         </table>
-
+        <br>
         <div>
             <input type="button" onclick="process()" value="Submit" class="styled-button">
             <input type="reset" value="Reset" class="styled-button">
