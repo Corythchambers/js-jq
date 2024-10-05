@@ -13,5 +13,5 @@ $(document).ready( () => {
 
         evt.preventDefault();
     })
-    $("#faqs").find("a:first").focus();
+    $("li:first-child a").focus();
 })

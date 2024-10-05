@@ -11,10 +11,12 @@ $(document).ready(() => {
         rolloverImage.src = newURL;
 
         // set up event handlers for hovering over an image
-        $(img).hover(   // use jQuery syntax to access hover() method
-            () => img.src = newURL,  // hover over
-            () => img.src = oldURL   // hover out
-        ); 
+        // $(img).hover(   // use jQuery syntax to access hover() method
+        //     () => img.src = newURL,  // hover over
+        //     () => img.src = oldURL   // hover out
+        // );
+
+        $(img).mouseover( () => img.src = newURL);
+        $(img).mouseout( () => img.src = oldURL);
     });
-    
 });
