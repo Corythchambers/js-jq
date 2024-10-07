@@ -6,32 +6,35 @@
     <title>Homework 3 - Part 2</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
 </head>
 <body>
-    <form name="seller-form" id="seller-form" >
+    <form name="seller-form" id="seller-form">
         <div>
             <label for="name">Seller's Name</label>
-            <input type="text" id="name" name="name" title="Please make sure that the salesperson's name is spelled correctly">
+            <input type="text" id="name" name="name" required title="Please make sure that the salesperson's name is spelled correctly">
         </div>
         <p>For each item type the quantity sold by the seller</p>
         <div>
             <label for="item1">Item 1:</label>
-            <input type="number" name="item1" id="item1">
+            <input type="number" name="item1" id="item1" required min="0">
         </div>
         <div>
             <label for="item2">Item 2:</label>
-            <input type="number" name="item2" id="item2">
+            <input type="number" name="item2" id="item2" required min="0">
         </div>
         <div>
             <label for="item3">Item 3:</label>
-            <input type="number" name="item3" id="item3">
+            <input type="number" name="item3" id="item3" required min="0">
         </div>
         <div>
             <label for="item4">Item 4:</label>
-            <input type="number" name="item4" id="item4">
+            <input type="number" name="item4" id="item4" required min="0">
         </div>
         <div>
-            <input type="button" value="Submit" class="styled-button">
+            <input type="button" id="submit" value="Submit" class="styled-button">
             <input type="reset" value="Reset" class="styled-button">
         </div>
         <table>
@@ -67,15 +70,15 @@
                     <td><input type="number" id="item4-total" readonly></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
                     <td>Total Amount Sold</td>
-                    <td></td>
-                    <td></td>
                     <td><input type="number" id="total-sold" readonly></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
                     <td>Total Weekly Earnings</td>
-                    <td></td>
-                    <td></td>
                     <td><input type="number" id="total-earnings" readonly></td>
                 </tr>
             </tbody>
@@ -92,6 +95,6 @@
             </li>
         </ul>
     </div>
-    <script src="part1.js"></script>
+    <script src="part2.js"></script>
 </body>
 </html>
