@@ -63,17 +63,21 @@ a:hover {
     margin: 2px;
 }
 
-input[type="number"], textarea {
+input[type="number"], input[type="text"], textarea {
     border: 1px solid darkmagenta;
     border-radius: 10px;
     padding: 10px;
     font-size: 14px;
 }
 
-input[type="number"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="text"]:focus, textarea:focus {
     outline: none;
     border-color: #9A1A9A;
     box-shadow: 0 0 5px #9A1A9A;
+}
+
+textarea {
+    background-color: rgb(254, 252, 206);
 }
 
 table {
@@ -103,4 +107,19 @@ form {
     padding: 20px;                 /* Optional: space inside the border */
     background-color: white;       /* Optional: background color for contrast */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for depth */
+}
+
+div {
+    margin-bottom: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 11em;
+    text-align: right;
+}
+
+input {
+    margin-left: 1em;
+    margin-right: 0.5em;
 }

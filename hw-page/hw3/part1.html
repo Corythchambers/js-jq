@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3 - Part 1</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Student Grades</h1>
+    </header>
+
+    <main>
+        <form name="student-grades" id="student-grades">
+            <div>
+                <label for="hw-average">Homework Average</label>
+                <input type="number" id="hw-average" name="hw-average">
+            </div>
+            <div>
+                <label for="midterm-exam">Mid-Term Exam Score</label>
+                <input type="number" id="midterm-exam" name="midterm-exam">
+            </div>
+            <div>
+                <label for="final-exam">Final Exam Score</label>
+                <input type="number" id="final-exam" name="final-exam">
+                <span></span>
+            </div>
+            <div>
+                <label for="participation">Participation</label>
+                <input type="number" id="participation" name="participation">
+            </div>
+            <div>
+                <textarea name="result" id="result" rows="4" cols="25" readonly></textarea>
+            </div>
+            <div>
+                <input type="button" id="submit" value="Submit" class="styled-button">
+                <input type="button" id="reset" value="Reset" class="styled-button">
+            </div>
+        </form>
+    </main>
+
+    <div>
+        <ul>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/hw3/hw3.html">Homework 3</a>
+            </li>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/index.html">Go Home</a>
+            </li>
+        </ul>
+    </div>
+    <script src="part1.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3 - Part 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form name="seller-form" id="seller-form" >
+        <div>
+            <label for="name">Seller's Name</label>
+            <input type="text" id="name" name="name" title="Please make sure that the salesperson's name is spelled correctly">
+        </div>
+        <p>For each item type the quantity sold by the seller</p>
+        <div>
+            <label for="item1">Item 1:</label>
+            <input type="number" name="item1" id="item1">
+        </div>
+        <div>
+            <label for="item2">Item 2:</label>
+            <input type="number" name="item2" id="item2">
+        </div>
+        <div>
+            <label for="item3">Item 3:</label>
+            <input type="number" name="item3" id="item3">
+        </div>
+        <div>
+            <label for="item4">Item 4:</label>
+            <input type="number" name="item4" id="item4">
+        </div>
+        <div>
+            <input type="button" value="Submit" class="styled-button">
+            <input type="reset" value="Reset" class="styled-button">
+        </div>
+        <table>
+            <thead>
+                <td>Item#</td>
+                <td>Price</td>
+                <td>Qty Sold</td>
+                <td>Total $</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>$20.99</td>
+                    <td><input type="number" id="item1-sold" readonly></td>
+                    <td><input type="number" id="item1-total" readonly></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>$12.75</td>
+                    <td><input type="number" id="item2-sold" readonly></td>
+                    <td><input type="number" id="item2-total" readonly></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>$9.95</td>
+                    <td><input type="number" id="item3-sold" readonly></td>
+                    <td><input type="number" id="item3-total" readonly></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>$35.89</td>
+                    <td><input type="number" id="item4-sold" readonly></td>
+                    <td><input type="number" id="item4-total" readonly></td>
+                </tr>
+                <tr>
+                    <td>Total Amount Sold</td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="number" id="total-sold" readonly></td>
+                </tr>
+                <tr>
+                    <td>Total Weekly Earnings</td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="number" id="total-earnings" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <div>
+        <ul>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/hw3/hw3.html">Homework 3</a>
+            </li>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/index.html">Go Home</a>
+            </li>
+        </ul>
+    </div>
+    <script src="part1.js"></script>
+</body>
+</html>

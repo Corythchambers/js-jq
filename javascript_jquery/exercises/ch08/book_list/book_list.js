@@ -1,7 +1,6 @@
 "use strict";
 $(document).ready( () => {
 
-
     $("#categories h2").click( evt => {
         const h2 = evt.currentTarget;
 
