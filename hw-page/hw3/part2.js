@@ -3,7 +3,9 @@ $(document).ready(() => {
         $(document).tooltip();
     });
 
-    $("#submit").click( () => {
+    $("table").hide();
+
+    $("#submit").click(() => {
 
     const item1 = parseInt($("#item1").val());
     const item2 = parseInt($("#item2").val());
@@ -30,5 +32,11 @@ $(document).ready(() => {
 
     $("#total-sold").val(totalSold);
     $("#total-earnings").val(totalEarnings.toFixed(2));
+
+    $("table").show();
     });
+
+    $("input[type='reset']").click(() => {
+        $("table").hide();
+    })
 })
