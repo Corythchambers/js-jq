@@ -8,7 +8,7 @@ $(document).ready( () => {
         const isValidScore = (value) => !isNaN(value) && value >= 0 && value <= 100;
 
         if (!isValidScore(hwAvg) || !isValidScore(midExam) || !isValidScore(finalExam) || !isValidScore(participation)) {
-            $("#result").val("Please enter valid numbers between 0 - 100")
+            $("#result").text("Please enter valid numbers between 0 - 100");
         } else {
             const average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation)
             let letterGrade;
@@ -24,16 +24,17 @@ $(document).ready( () => {
                 letterGrade = "F"
             }
 
-            let resultsString = `Grade Average:${average.toFixed(0)}\nLetter Grade:${letterGrade}`
+            let resultsString = `Grade Average: ${average.toFixed(0)}<br>Letter Grade: ${letterGrade}`;
             if (letterGrade == "D" || letterGrade == "F") {
-                $("#result").val(`${resultsString}\nStudent must retake the course`);
+                $("#result").html(`${resultsString}<br>Student must retake the course`);
             } else {
-                $("#result").val(resultsString);
+                $("#result").html(resultsString);
             }
         }
-    })
+    });
 
     $("#reset").click( () => {
-        $("#student-grades").find("input[type='number'], textarea").val("");
-    })
+        $("#student-grades").find("input[type='number']").val("");
+        $("#result").text("");
+    });
 });
