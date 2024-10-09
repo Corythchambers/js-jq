@@ -1,46 +1,17 @@
-function getRandomOperation() {
-    const operations = [
-        '+',
-        '-',
-        '*',
-        '/',
-    ];
+function getEquationData() {
+    const num1 = Math.floor(Math.random() * 10);
+    const num2 = Math.floor(Math.random() * 10);
 
-    const randomIndex = Math.floor(Math.random() * operations.length);
+    result = num1 * num2;
+    operationText = "multiplied by";
 
-    const randomValue = operations[randomIndex];
-
-    return randomValue;
-}
-
-function getEquationData(operation) {
-    const num1 = Number((Math.random() * 100).toFixed(0));
-    const num2 = Number((Math.random() * 100).toFixed(0));
-
-    let result;
-    let operationText;
-
-    if (operation == '+') {
-        result = num1 + num2;
-        operationText = "plus";
-    } else if (operation == '-') {
-        result = num1 - num2;
-        operationText = "minus";
-    } else if (operation == '*') {
-        result = num1 * num2;
-        operationText = "multiplied by";
-    } else {
-        result = (num1 / num2).toFixed(0);
-        operationText = "divided by";
-    }
 
     const equation = `${num1} ${operationText} ${num2}`;
     return { equation, result };
 }
 
 function startNewGame() {
-    const operation = getRandomOperation();
-    const { equation, result } = getEquationData(operation);
+    const { equation, result } = getEquationData();
 
     $("#question").text(`What is\n${equation}`);
 
