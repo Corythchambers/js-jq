@@ -33,8 +33,7 @@ function getArrayWhileLoop(start, finish, interval) {
 }
 
 $(document).ready(() => {
-    //calculate product and sum of every fourht integer from 5 to 25 inclusive
-
+    // Calculate product and sum of every fourth integer from 5 to 25 inclusive
     const firstSet = getEveryXInt(5, 25, 4);
     const productString1 = getResultString(firstSet, '*');
     const sumString1 = getResultString(firstSet, '+');
