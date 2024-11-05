@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 5 - Part 1</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>User Information</h1>
+    </header>
+    <form name="user-info" id="user-info">
+        <div>
+            <div>
+                <span id="name-error" class="error-text"></span>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div id="age-groups">
+                <span id="age-error" class="error-text"></span>
+                <p><b>Choose your age group:</b><br>
+                <input type="radio" value="young" name="ageGroup" id="ageGroup1">
+                <label for="ageRadio01">Under 21</label><br> 
+                <input type="radio" value="middle" name="ageGroup" id="ageGroup2">
+                <label for="ageRadio02">21 to 50</label><br> 
+                <input type="radio" value="old" name="ageGroup" id="ageGroup3">
+                <label for="ageRadio03">Over 50</label><br> 
+            </div>
+            <div id="browser-choices">
+                <span id="browser-error" class="error-text"></span>
+                <p><b>Choose your preferred browsers:</b><br>
+                <input type="checkbox" value="firefox" name="browserChoice" id="browserCheckbox01">
+                <label for="browserCheckbox01">Firefox</label><br> 
+                <input type="checkbox" value="edge" name="browserChoice" id="browserCheckbox02">
+                <label for="browserCheckbox02">Edge</label><br> 
+                <input type="checkbox" value="chrome" name="browserChoice" id="browserCheckbox03">
+                <label for="browserCheckbox03">Chrome</label><br> 
+                <input type="checkbox" value="safari" name="browserChoice" id="browserCheckbox04">
+                <label for="browserCheckbox04">Safari</label><br> 
+            </div>
+            <div id="movie-preferences">
+                <span id="movie-error" class="error-text"></span>
+                <label for="movies">Movie Preferences</label>
+                <select name="movies" id="movies">
+                    <option value="" disabled selected>Select a genre</option>  
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="documentary">Documentary</option>
+                    <option value="science-fiction">Science Fiction</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="Submit" id="submit">
+        <input type="reset" value="Clear Form" id="reset">
+    </form>
+    <div id="form-result"></div>
+    <div>
+        <ul>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/hw5/hw5.html">Homework 5</a>
+            </li>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/index.html">Go Home</a>
+            </li>
+        </ul>
+    </div>
+    <script src="part1.js"></script>
+</body>
+</html>

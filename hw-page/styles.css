@@ -138,3 +138,13 @@ p#result {
     margin: 0;
     white-space: pre-wrap;
 }
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    height: 1em;
+    margin-bottom: 5px;
+    display: block; 
+    text-align: left;
+    margin-left: 11em; 
+}

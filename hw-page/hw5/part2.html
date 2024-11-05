@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 5 - Part 2</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Web Navigation</h1>
+    </header>
+    <main>
+        <form action="">
+            <div id="onchange">
+                <label for="onchange">On Change Navigation</label>
+                <select name="onchange" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                    <option value="http://www.yahoo.com/">Yahoo</option>
+                    <option value="http://www.google.com/">Google</option>
+                    <option value="http://www.altavista.com/">Altavista</option>
+                </select>
+            </div>
+    
+        <div id="onclick">
+            <label for="myDestination">On Submit Navigation</label>
+                <select name="myDestination">
+                    <option value="http://www.yahoo.com/">Yahoo</option>
+                    <option value="http://www.google.com/">Google</option>
+                    <option value="http://www.altavista.com/">Altavista</option>
+                </select>
+                <input type="button" value="Open in New Window!" onclick="ob=this.form.myDestination;window.open(ob.options[ob.selectedIndex].value)">
+            </form>
+        
+        </div>
+    </main>
+    <div>
+        <ul>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/hw5/hw5.html">Homework 5</a>
+            </li>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/index.html">Go Home</a>
+            </li>
+        </ul>
+    </div>
+    <script src="part2.js"></script>
+</body>
+</html>
