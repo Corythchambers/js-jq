@@ -11,6 +11,17 @@ const isPrimeNumber = (number) => {
     return isPrime;
 };
 
+
+const getPrimeNumbers = (number) => {
+    const primeNumbers = [];
+    for (let i = 1; i <= number; i++) {  
+        if (isPrimeNumber(i)) {
+            primeNumbers.push(i);
+        }
+    }
+    return primeNumbers.length > 0 ? primeNumbers.join(" ") : `${number} is NOT a prime number.`;
+};
+ 
 $(document).ready( () => {
     
     $("#calculate").click( () => {
@@ -18,13 +29,7 @@ $(document).ready( () => {
         if ( isNaN(number) ) {
             $("#message").text( "Please enter a number." );
         } else {
-            const isPrime = isPrimeNumber( number );
-
-            if ( isPrime === true ) {
-                $("#message").text( number + " is a prime number." );
-            } else {
-                $("#message").text( number + " is NOT a prime number." );
-            }
+            $("#message").text( getPrimeNumbers(number) );
         }
         $("#number").focus();
         $("#number").select();
