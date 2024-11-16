@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 6 - Part 1</title>
+    <title>Homework 6 - Part 2</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Part 1 - Math Object</h1>
+        <h1>Part 2 - Search String</h1>
     </header>
     <form id="user-input">
         <div>
-            <label for="input">Input a floating number with at least 4 decimals</label>
+            <label for="input">Input as much text as you would like</label>
             <input type="text" id="input">
-            <span id="error" class="error-text"></span>
+            <span id="name-error" class="error-text"></span>
+        </div>
+        <div>
+            <label for="search-char">Enter a character</label>
+            <input type="text" id="search-char" maxlength="1">
         </div>
         <div>
             <input type="submit" value="Submit" id="submit">
             <input type="reset" value="Reset" id="reset">
         </div>
         <div>
+            <span id="error" class="error-text"></span>
             <span id="results" class="results"></span>
         </div>
     </form>
@@ -35,6 +40,6 @@
             </li>
         </ul>
     </div>
-    <script src="part1.js"></script>
+    <script src="part2.js"></script>
 </body>
 </html>
