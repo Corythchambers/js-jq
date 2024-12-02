@@ -101,7 +101,7 @@ table {
     display: none;
 }
 
-form {
+form, main {
     border: 2px solid darkmagenta; /* Set the border color and width */
     border-radius: 10px;           /* Optional: rounded corners */
     padding: 20px;                 /* Optional: space inside the border */

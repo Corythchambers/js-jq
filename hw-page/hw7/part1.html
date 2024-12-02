@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 7 - Part 1</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Applying CSS Through User Selections</h1>
+    </header>
+    <main>
+        <p>
+            I remember all those thousands of hours
+            I spent in grade school watching the clock,
+            waiting for recess or lunch or to go home.
+            Waiting: for anything but school.
+            My teachers could easily have ridden with Jesse James
+            for all the time they stole from me.
+            <br>
+            - Richard Brautigan
+        </p>
+    </main>
+    <br>
+    <form id="user-input">
+        <div>
+            <h3>
+                Choose a background color
+            </h3>
+            <label for="background1">Yellow</label>
+            <input type="radio" value="yellow" id="background1" name="background">
+            <label for="background2">Blue</label>
+            <input type="radio" value="lightblue" id="background2" name="background">
+            <label for="background3">Purple</label>
+            <input type="radio" value="orange" id="background3" name="background">
+        </div>
+        <div>
+            <h3>Choose text styling</h3>
+            <label for="text-style1">Underline</label>
+            <input type="checkbox" value="text-style" name="text-style1" id="text-style1">
+            <label for="text-style2">Bold</label>
+            <input type="checkbox" value="text-style" name="text-style2" id="text-style2">
+            <label for="text-style3">Italic</label>
+            <input type="checkbox" value="text-style" name="text-style3" id="text-style3">
+        </div>
+        <div>
+            <select name="font-size" id="font-size">
+                <option value="1rem">1 rem</option>
+                <option value="2rem">2 rem</option>
+                <option value="3rem">3 rem</option>
+                <option value="4rem">4 rem</option>
+            </select>
+        </div>
+    </form>
+    <div>
+        <ul>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/hw7/hw7.html">Homework 7</a>
+            </li>
+            <li>
+                <a href="https://hills.ccsf.edu/~cchamb23/hw-page/index.html">Go Home</a>
+            </li>
+        </ul>
+    </div>
+    <script src="part1.js"></script>
+</body>
+</html>
